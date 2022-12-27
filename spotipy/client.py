@@ -614,7 +614,7 @@ class Spotify(object):
         """ Gets playlist by id.
 
             Parameters:
-                - playlist - the id of the playlist
+                - playlist_id - the id of the playlist
                 - fields - which fields to return
                 - market - An ISO 3166-1 alpha-2 country code or the
                            string from_token.
@@ -823,7 +823,7 @@ class Spotify(object):
 
             Parameters:
                 - user - the id of the user
-                - name - the name of the playlist
+                - playlist_id - the id of the playlist
         """
         warnings.warn(
             "You should use `current_user_unfollow_playlist(playlist_id)` instead",
@@ -859,8 +859,8 @@ class Spotify(object):
         """ Adds episodes to a playlist
 
             Parameters:
-                - user - the id of the user
-                - playlist_id - the id of the playlist
+                - user - the ID of the user
+                - playlist_id - the ID of the playlist
                 - episodes - a list of track URIs, URLs or IDs
                 - position - the position to add the episodes
         """
@@ -873,7 +873,7 @@ class Spotify(object):
             Parameters:
                 - user - the id of the user
                 - playlist_id - the id of the playlist
-                - tracks - the list of track ids to add to the playlist
+                - tracks - the list of track IDs to add to the playlist
         """
         warnings.warn(
             "You should use `playlist_replace_items(playlist_id, tracks)` instead",
@@ -896,10 +896,10 @@ class Spotify(object):
                 - user - the id of the user
                 - playlist_id - the id of the playlist
                 - range_start - the position of the first track to be reordered
-                - range_length - optional the number of tracks to be reordered
-                                 (default: 1)
                 - insert_before - the position where the tracks should be
                                   inserted
+                - range_length - optional the number of tracks to be reordered
+                                 (default: 1)
                 - snapshot_id - optional playlist's snapshot ID
         """
         warnings.warn(
