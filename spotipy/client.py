@@ -1634,17 +1634,17 @@ class Spotify(object):
 
             Parameters:
                 - seed_artists - a list of artist IDs, URIs or URLs
-                - seed_tracks - a list of track IDs, URIs or URLs
                 - seed_genres - a list of genre names. Available genres for
                                 recommendations can be found by calling
                                 recommendation_genre_seeds
-
-                - country - An ISO 3166-1 alpha-2 country code. If provided,
-                            all results will be playable in this country.
-
+                                
+                - seed_tracks - a list of track IDs, URIs or URLs
                 - limit - The maximum number of items to return. Default: 20.
                           Minimum: 1. Maximum: 100
-
+                          
+                - country - An ISO 3166-1 alpha-2 country code. If provided,
+                            all results will be playable in this country.
+                            
                 - min/max/target_<attribute> - For the tuneable track
                     attributes listed in the documentation, these values
                     provide filters and targeting on results.
@@ -1903,10 +1903,9 @@ class Spotify(object):
             'Player command failed: Restriction violated' error
             I therefore recommend leaving device_id as None so that the active device is targeted
 
-            :param uri: song uri, id, or url
-            :param device_id:
-                the id of a Spotify device.
-                If None, then the active device is used.
+            Parameters:
+            - uri - song uri, id, or url
+            - device_id - the id of a Spotify device. If None, then the active device is used.
 
         """
 
